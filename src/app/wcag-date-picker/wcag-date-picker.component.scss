@@ -1,0 +1,43 @@
+.date-picker {
+    position: relative;
+    display: inline-block;
+}
+
+.calendar {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-week-day,
+.calendar-date {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.calendar-date {
+    cursor: pointer;
+}
+
+.calendar-date.is-today {
+    border: 1px solid blue;
+}
+
+.calendar-date.is-selected {
+    background-color: blue;
+    color: white;
+}
